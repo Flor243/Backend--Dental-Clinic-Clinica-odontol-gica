@@ -18,7 +18,7 @@ Project carried out in the backend course of Certified Tech Developer belonging 
 
 ## Set up:
 - Clone the repository using: git clone https://github.com/Flor243/Backend-Dental-Clinic-Clinica-odontologica.git </br>
- or download the zip and then extracts the files.
+ or download the zip and then extract the files.
  
  - Open the project in your IDE.
  
@@ -38,7 +38,7 @@ Project carried out in the backend course of Certified Tech Developer belonging 
  
  To login like a user:
  <ul>
-  <li>username: userUser/li>
+  <li>username: userUser</li>
   <li>password: user</li>
  </ul>
 
