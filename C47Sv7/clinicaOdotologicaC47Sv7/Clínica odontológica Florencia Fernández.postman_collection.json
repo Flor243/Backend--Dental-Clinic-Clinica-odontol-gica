@@ -1,0 +1,918 @@
+{
+	"info": {
+		"_postman_id": "6d3eef6c-1aee-478d-a5ea-b6cda8d63f23",
+		"name": "Clínica odontológica Florencia Fernández",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "1. Cargar datos",
+					"item": [
+						{
+							"name": "Cargar un paciente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"nombre\": \"n\",\r\n    \"apellido\": \"a\",\r\n    \"email\": \"n@mail.com\",\r\n    \"dni\": 12345678,\r\n    \"fechaIngreso\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"domicilioDTO\": {\r\n        \r\n        \"calle\": \"calle\",\r\n        \"numero\": \"1234\",\r\n        \"localidad\": \"l\",\r\n        \"provincia\": \"p\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/pacientes/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargar un paciente 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"nombre\": \"n2\",\r\n    \"apellido\": \"a2\",\r\n    \"email\": \"n2@mail.com\",\r\n    \"dni\": 123456789,\r\n    \"fechaIngreso\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"domicilioDTO\": {\r\n        \r\n        \"calle\": \"calle2\",\r\n        \"numero\": \"1234\",\r\n        \"localidad\": \"l2\",\r\n        \"provincia\": \"p2\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/pacientes/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargar un paciente 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"nombre\": \"n3\",\r\n    \"apellido\": \"a3\",\r\n    \"email\": \"n3@mail.com\",\r\n    \"dni\": 1234567891,\r\n    \"fechaIngreso\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"domicilioDTO\": {\r\n        \r\n        \"calle\": \"calle3\",\r\n        \"numero\": \"1234\",\r\n        \"localidad\": \"l3\",\r\n        \"provincia\": \"p3\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/pacientes/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2. Obtener datos por id",
+					"item": [
+						{
+							"name": "Obtener paciente por id. En este caso id=1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/pacientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener paciente por id exception Not Found",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/pacientes/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "3. Actualizar datos",
+					"item": [
+						{
+							"name": "Actualizar paciente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"nActualizado\",\r\n    \"apellido\": \"a\",\r\n    \"email\": \"n@mail.com\",\r\n    \"dni\": 12345678,\r\n    \"fechaIngreso\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"domicilioDTO\": {\r\n        \"id\": 1,\r\n        \"calle\": \"calle\",\r\n        \"numero\": \"1234\",\r\n        \"localidad\": \"l\",\r\n        \"provincia\": \"p\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/pacientes/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar paciente exception Not Found",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 15,\r\n    \"nombre\": \"nActualizado\",\r\n    \"apellido\": \"a\",\r\n    \"email\": \"n@mail.com\",\r\n    \"dni\": 12345678,\r\n    \"fechaIngreso\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"domicilioDTO\": {\r\n        \"id\": 1,\r\n        \"calle\": \"calle\",\r\n        \"numero\": \"1234\",\r\n        \"localidad\": \"l\",\r\n        \"provincia\": \"p\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/pacientes/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "4. Eliminar datos",
+					"item": [
+						{
+							"name": "Eliminar paciente por id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/pacientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar paciente por id exception",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/pacientes/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "5. Obtener todos",
+					"item": [
+						{
+							"name": "Obtener todos los pacientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/pacientes/todos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"todos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Odontologos",
+			"item": [
+				{
+					"name": "1. Cargar datos",
+					"item": [
+						{
+							"name": "Cargar un odontologo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"nombre\": \"nombreOdontologo1\",\r\n    \"apellido\": \"apellidoOdontologo1\",\r\n    \"matricula\": 12345678\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/odontologos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargar un odontologo 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"nombre\": \"nombreOdontologo2\",\r\n    \"apellido\": \"apellidoOdontologo2\",\r\n    \"matricula\": 12345678\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/odontologos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargar un odontologo 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"nombre\": \"nombreOdontologo3\",\r\n    \"apellido\": \"apellidoOdontologo3\",\r\n    \"matricula\": 12345678\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/odontologos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2. Obtener datos por id",
+					"item": [
+						{
+							"name": "Obtener odontologo por id. En este caso id=1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/odontologos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener odontologo por id exception",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/odontologos/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "3. Actualizar datos",
+					"item": [
+						{
+							"name": "Actualizar odontologo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"nombreOdontologoActualizado1\",\r\n    \"apellido\": \"apellidoOdontologo1\",\r\n    \"matricula\": 12345678\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/odontologos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar odontologo exception",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 15,\r\n    \"nombre\": \"nombreOdontologo1\",\r\n    \"apellido\": \"apellidoOdontologo1\",\r\n    \"matricula\": 12345678\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/odontologos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "4. Eliminar datos",
+					"item": [
+						{
+							"name": "Eliminar odontologo por id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/odontologos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar odontologo por id exception",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/odontologos/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "5. Obtener datos",
+					"item": [
+						{
+							"name": "Obtener todos los odontologos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/odontologos/todos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"todos",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Turnos",
+			"item": [
+				{
+					"name": "1. Cargar datos",
+					"item": [
+						{
+							"name": "Cargar un turno",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"fecha\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"hora\": \"9:30\",\r\n    \"pacienteDTO\": {\r\n        \"id\": 2\r\n        \r\n    },\r\n    \"odontologoDTO\": {\r\n        \"id\": 2\r\n        \r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/turnos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargar un turno 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"fecha\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"hora\": \"9:00\",\r\n    \"pacienteDTO\": {\r\n        \"id\": 2\r\n        \r\n    },\r\n    \"odontologoDTO\": {\r\n        \"id\": 2\r\n        \r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/turnos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargar un turno 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"fecha\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"hora\": \"10:00\",\r\n    \"pacienteDTO\": {\r\n        \"id\": 2\r\n        \r\n    },\r\n    \"odontologoDTO\": {\r\n        \"id\": 2\r\n        \r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/turnos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargar un turno exception",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"fecha\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"hora\": \"9:30\",\r\n    \"pacienteDTO\": {\r\n        \"id\": 15\r\n        \r\n    },\r\n    \"odontologoDTO\": {\r\n        \"id\": 1\r\n        \r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/turnos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2. Obtener datos por id",
+					"item": [
+						{
+							"name": "Obtener turno por id. En este caso id=1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/turnos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener turno por id exception",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/turnos/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "3. Actualizar datos",
+					"item": [
+						{
+							"name": "Actualizar turno",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idTurno\": 1,\r\n    \"fecha\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"hora\": \"10:30\",\r\n    \"pacienteDTO\": {\r\n        \"id\": 2,\r\n        \"nombre\": \"n2\",\r\n        \"apellido\": \"a2\",\r\n        \"email\": \"n2@mail.com\",\r\n        \"dni\": 123456789,\r\n        \"fechaIngreso\": \"2022-04-19T00:00:00.000+00:00\",\r\n        \"domicilioDTO\": {\r\n            \"id\": 2,\r\n            \"calle\": \"calle2\",\r\n            \"numero\": \"1234\",\r\n            \"localidad\": \"l2\",\r\n            \"provincia\": \"p2\"\r\n        }\r\n    },\r\n    \"odontologoDTO\": {\r\n       \"id\": 2,\r\n        \"nombre\": \"nombreOdontologo2\",\r\n        \"apellido\": \"apellidoOdontologo2\",\r\n        \"matricula\": 12345678\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/turnos/actualizar/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"actualizar",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar turno exception",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idTurno\": 15,\r\n    \"fecha\": \"2022-04-19T00:00:00.000+00:00\",\r\n    \"hora\": \"10:00\",\r\n    \"pacienteDTO\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"nActualizado\",\r\n        \"apellido\": \"a\",\r\n        \"email\": \"n@mail.com\",\r\n        \"dni\": 12345678,\r\n        \"fechaIngreso\": \"2022-04-19T00:00:00.000+00:00\",\r\n        \"domicilioDTO\": {\r\n            \"id\": 1,\r\n            \"calle\": \"calle\",\r\n            \"numero\": \"1234\",\r\n            \"localidad\": \"l\",\r\n            \"provincia\": \"p\"\r\n        }\r\n    },\r\n    \"odontologoDTO\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"nombreOdontologoActualizado1\",\r\n        \"apellido\": \"apellidoOdontologo1\",\r\n        \"matricula\": 12345678\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/turnos/actualizar/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"actualizar",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "4. Eliminar datos",
+					"item": [
+						{
+							"name": "Eliminar turno por id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/turnos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar turno por id exception",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/turnos/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "5. Obtener datos",
+					"item": [
+						{
+							"name": "Obtener todos los turnos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/turnos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "userUser",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "userUser",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "user",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "adminUser",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
