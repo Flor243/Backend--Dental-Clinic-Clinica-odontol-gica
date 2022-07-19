@@ -32,7 +32,7 @@ Project carried out in the backend course of Certified Tech Developer belonging 
  
  To login like an admin:
  <ul>
-  <li>username: adminUser/li>
+  <li>username: adminUser</li>
   <li>password: admin</li>
  </ul>
  
